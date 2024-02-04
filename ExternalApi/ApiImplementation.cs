@@ -12,9 +12,9 @@ internal sealed class ApiImplementation
         Instance.KokoroApi.SetExtensionData(state, CurrentPlayerEnergyKey, energyTotal);
     }
 
-    public int GetCurrentPlayerShipEnergy(State state)
+    public int? GetCurrentPlayerShipEnergy(State state)
     {
-        return Instance.KokoroApi.GetExtensionData<int>(state, CurrentPlayerEnergyKey);
+        return state != DB.fakeState ? Instance.KokoroApi.GetExtensionData<int>(state, CurrentPlayerEnergyKey) : null;
     }
     
 }

@@ -1,0 +1,13 @@
+
+**/.vs/**
+*/bin/**
+*/obj/**
+*/.bin/**
+*/Backup/**
+*/.obj/**
+*/.release/**
+packages/**
+**/*.zip
+*.user
+*.user.*
+**/CobaltCore.dll

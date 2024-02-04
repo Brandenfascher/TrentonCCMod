@@ -1,0 +1,68 @@
+{
+  "character": {
+    "Trenton": {
+      "name": "Trenton",
+      "description": "<c=088482>Trenton</c>\nA time wizard from another dimension. His cards shift <c=boldPink>energy</c> across turns, adds cards to the top of the <c=boldPink>Draw Pile</c>, and responds to events of <c=boldPink>the previous turn</c>."
+    }
+  },
+  "artifact": {
+    "TemporalEngine": {
+      "name": "Temporal Engine",
+      "description": "Cycle between gaining 1 energy for two turns and losing 1 energy for a third turn."
+    }
+  },
+  "card": {
+    "BorrowTime": {
+      "name": "Borrow Time"
+    },
+    "Raincheck": {
+      "name": "Raincheck"
+    },
+    "WibblyWobbly": {
+      "name": "Wibbly Wobbly"
+    },
+    "TemporalCharge": {
+      "name": "Temporal Charge",
+      "description": {
+        "None": "Add <c=white>Delayed Shot</c> to the top of your <c=white>draw pile</c>.",
+        "A": "Add <c=white>Delayed Shot A</c> to the top of your <c=white>draw pile</c>.",
+        "B": "Add <c=white>Delayed Shot B</c> to the top of your <c=white>draw pile</c>."
+      }
+    },
+    "DelayedPotential": {
+      "name": "Delayed Potential"
+    },
+    "StasisField": {
+      "name": "Stasis Field"
+    },
+    "EvasiveInsight": {
+      "name": "Evasive Insight",
+      "description": {
+        "None": "Add <c=status>evade</c> = total dmg/2 of enemy's cannon attacks",
+        "A": "Add <c=status>evade</c> = total dmg/2 of enemy's cannon attacks",
+        "B": "Add <c=status>evade</c> = total dmg of enemy's cannon attacks"
+      }
+    },
+    "AllShesGot": {
+      "name": "All She's Got",
+      "description": {
+        "None": "Attack, using all energy. Dmg = x2 per <c=energy>energy</c>", // "Use all energy, attack for dmg = x2 per energy"
+        "A": "Attack, using all energy. Dmg = x2.5 per <c=energy>energy</c>",
+        "B": "Attack, using all energy. Dmg = x2 per <c=energy>energy</c>",
+        "B-Extended": ". Gain 1 energy."
+      }
+    },
+    "Abeyance": {
+      "name": "Abeyance",
+      "description": {
+        "None": "Pick a <c=cardtrait>discarded</c> card. Send it to the top of your <c=white>draw pile</c>.",
+        "A": "Pick two <c=cardtrait>discarded</c> cards. Send them to the top of your <c=white>draw pile</c>.",
+        "B": "Pick an <c=cardtrait>exhausted</c> card. Send it to the top of your <c=white>draw pile</c>."
+      },
+      "GetCardSelectText": "Pick a discarded card to send to the top of your draw pile."
+    },
+    "ParadoxStrafe": {
+      "name": "Paradox Strafe"
+    }
+  }
+}

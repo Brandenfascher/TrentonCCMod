@@ -1,0 +1,17 @@
+﻿/*
+    loopTags:
+    
+    "neutral"
+    "panic"
+    "squint"
+
+    */
+{
+  "Brandenfascher.TrentonChar::Trenton_ChoiceCardRewardOfYourColorChoice_0": {
+    "dialogue1": {
+      "who": "Brandenfascher.TrentonChar::Trenton",
+      "what": "I gladly accept this knowledge.",
+      "loopTag": "neutral"
+    }
+  }
+}

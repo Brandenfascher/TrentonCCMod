@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<RootNamespace>Brandenfascher.TrentonChar</RootNamespace>
+		<Version>0.1.0</Version>
+		<IsNickelMod>True</IsNickelMod>
+		<IncludedModProjectPaths>i18n;assets</IncludedModProjectPaths>
+		<LangVersion>12.0</LangVersion>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<WarningsAsErrors>Nullable</WarningsAsErrors>
+		<CheckEolTargetFramework>false</CheckEolTargetFramework>
+		<ModZipPath>$(MSBuildProjectDirectory)\.release\$(MSBuildProjectName)-$(Version).zip</ModZipPath>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Project Include="Configuration.props.user" Condition="Exists('Configuration.props.user')" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+		<PackageReference Include="Nickel.ModBuildConfig" Version="0.4.0" />
+	</ItemGroup>
+</Project>

@@ -3,7 +3,7 @@
 */bin/**
 */obj/**
 */.bin/**
-*/Backup/**
+Backup/**
 */.obj/**
 */.release/**
 packages/**
@@ -11,3 +11,5 @@ packages/**
 *.user
 *.user.*
 **/CobaltCore.dll
+obj/
+bin/

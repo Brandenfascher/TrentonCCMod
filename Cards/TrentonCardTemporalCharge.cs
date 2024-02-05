@@ -22,10 +22,25 @@ internal sealed class TrentonCardTemporalCharge : Card, TrentonCard
     }
     public override CardData GetData(State state)
     {
+        string cardName = "";
+        switch(upgrade)
+        {
+            case Upgrade.None:
+                cardName = new TrentonCardDelayedPotential() { upgrade = Upgrade.None }.GetFullDisplayName();
+                break;
+            case Upgrade.A:
+                cardName = new TrentonCardDelayedPotential() { upgrade = Upgrade.A }.GetFullDisplayName();
+                break;
+            case Upgrade.B:
+                cardName = new TrentonCardDelayedPotential() { upgrade = Upgrade.B }.GetFullDisplayName();
+                break;
+        }
+
         return new CardData()
         {
             cost = 0,
-            description = ModEntry.Instance.Localizations.Localize(["card", "TemporalCharge", "description", upgrade.ToString()])
+            description = ModEntry.Instance.Localizations.Localize(["card", "TemporalCharge", "description", "first"])
+                + cardName + ModEntry.Instance.Localizations.Localize(["card", "TemporalCharge", "description", "last"])
         };
     }
     public override List<CardAction> GetActions(State s, Combat c)

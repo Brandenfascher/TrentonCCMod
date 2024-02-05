@@ -24,9 +24,8 @@
     "TemporalCharge": {
       "name": "Temporal Charge",
       "description": {
-        "None": "Add <c=white>Delayed Shot</c> to the top of your <c=white>draw pile</c>.",
-        "A": "Add <c=white>Delayed Shot A</c> to the top of your <c=white>draw pile</c>.",
-        "B": "Add <c=white>Delayed Shot B</c> to the top of your <c=white>draw pile</c>."
+        "first": "Add <c=white>",
+        "last": "</c> to the top of your <c=white>draw pile</c>."
       }
     },
     "DelayedPotential": {

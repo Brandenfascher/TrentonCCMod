@@ -27,9 +27,9 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
         {
             cost = flipped == true ? 0 : 1,
             floppable = true,
-            art = (flipped ? Spr.cards_MiningDrill_Bottom : Spr.cards_MiningDrill_Top),
+            art = (flipped ? Spr.cards_Adaptability_Bottom : Spr.cards_Adaptability_Top),
             artTint = "ffffff",
-            singleUse = true,
+            exhaust = true,
             temporary = true
         };
     }
@@ -43,7 +43,6 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
             case Upgrade.None:
                 List<CardAction> cardActionList1 = new List<CardAction>()
                 {
-                    new ADummyAction(),
                     new AAttack()
                     {
                         damage = 2,
@@ -61,7 +60,6 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
             case Upgrade.A:
                 List<CardAction> cardActionList2 = new List<CardAction>()
                 {
-                    new ADummyAction(),
                     new AAttack()
                     {
                         damage = 3,
@@ -79,7 +77,6 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
             case Upgrade.B:
                 List<CardAction> cardActionList3 = new List<CardAction>()
                 {
-                    new ADummyAction(),
                     new AAttack()
                     {
                         damage = 2,

@@ -36,13 +36,13 @@ internal sealed class TrentonCardAllShesGot : Card, TrentonCard
         switch (upgrade)
         {
             case Upgrade.None:
-                data.description = ModEntry.Instance.Localizations.Localize(["card", "AllShesGot", "description", upgrade.ToString()]) + ((state.route is Combat) ? (": <c=hurt>" + totalEnergy * 2 + "</c") : "");
+                data.description = ModEntry.Instance.Localizations.Localize(["card", "AllShesGot", "description", upgrade.ToString()]) + ((state.route is Combat) ? (": <c=hurt>" + totalEnergy * 2 + "</c>") : "");
                 break;
             case Upgrade.A:
-                data.description = ModEntry.Instance.Localizations.Localize(["card", "AllShesGot", "description", upgrade.ToString()]) + ((state.route is Combat) ? (": <c=hurt>" + (int)Math.Ceiling(totalEnergy * 2.5) + "</c") : "");
+                data.description = ModEntry.Instance.Localizations.Localize(["card", "AllShesGot", "description", upgrade.ToString()]) + ((state.route is Combat) ? (": <c=hurt>" + (int)Math.Ceiling(totalEnergy * 2.5) + "</c>") : "");
                 break;
             case Upgrade.B:
-                data.description = ModEntry.Instance.Localizations.Localize(["card", "AllShesGot", "description", upgrade.ToString()]) + ((state.route is Combat) ? (": <c=hurt>" + totalEnergy * 2 + "</c") : "");
+                data.description = ModEntry.Instance.Localizations.Localize(["card", "AllShesGot", "description", upgrade.ToString()]) + ((state.route is Combat) ? (": <c=hurt>" + totalEnergy * 2 + "</c>") : "");
                 data.description += ModEntry.Instance.Localizations.Localize(["card", "AllShesGot", "description", upgrade.ToString() + "-Extended"]);
                 break;
         }

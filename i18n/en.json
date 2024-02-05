@@ -46,9 +46,9 @@
     "AllShesGot": {
       "name": "All She's Got",
       "description": {
-        "None": "Attack, using all energy. Dmg = x2 per <c=energy>energy</c>", // "Use all energy, attack for dmg = x2 per energy"
-        "A": "Attack, using all energy. Dmg = x2.5 per <c=energy>energy</c>",
-        "B": "Attack, using all energy. Dmg = x2 per <c=energy>energy</c>",
+        "None": "Attack using all <c=energy>energy</c> for x2 DMG each",
+        "A": "Attack using all <c=energy>energy</c> for x2.5 DMG each",
+        "B": "Attack using all <c=energy>energy</c> for x2 DMG each",
         "B-Extended": ". Gain 1 energy."
       }
     },

@@ -11,7 +11,17 @@
       "description": "Cycle between gaining 1 energy for two turns and losing 1 energy for a third turn."
     }
   },
+  "cardTrait": {
+    "flippableDiscount": {
+      "name": "Flippable Discount",
+      "description": 
+          "This card has <c=keyword>alternate costs</c> when flipped."
+    }
+  },
   "card": {
+    "Testing": {
+      "name": "Testing"
+    },
     "BorrowTime": {
       "name": "Borrow Time"
     },

@@ -4,11 +4,14 @@ using System.Collections.Generic;
 
 namespace Brandenfascher.TrentonChar.Cards;
 
-internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
+internal class TestingCard : Card, TrentonCard
 {
+    private static ISpriteEntry FlippableDiscountIcon = null!;
     public static void Register(IModHelper helper)
-    {   
-        helper.Content.Cards.RegisterCard("DelayedPotential", new()
+    {
+        FlippableDiscountIcon = helper.Content.Sprites.RegisterSprite(ModEntry.Instance.Package.PackageRoot.GetRelativeFile("assets/icons/unused/flippable_discount.png"));
+
+        helper.Content.Cards.RegisterCard("Testing", new()
         {
             CardType = MethodBase.GetCurrentMethod()!.DeclaringType!,
             Meta = new()
@@ -17,7 +20,7 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
                 dontOffer = true,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
-            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "DelayedPotential", "name"]).Localize
+            Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "Testing", "name"]).Localize
         });
     }
 
@@ -25,7 +28,7 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
     {
         return new CardData()
         {
-            cost = 1,
+            cost = flipped == true ? 0 : 1,
             floppable = true,
             art = (flipped ? Spr.cards_Adaptability_Bottom : Spr.cards_Adaptability_Top),
             artTint = "ffffff",
@@ -43,7 +46,6 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
             case Upgrade.None:
                 List<CardAction> cardActionList1 = new List<CardAction>()
                 {
-                    new ADummyAction(),
                     new AAttack()
                     {
                         damage = 2,
@@ -54,11 +56,6 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
                     {
                         count = 2,
                         disabled = !flipped
-                    },
-                    new AEnergy()
-                    {
-                        changeAmount = 1,
-                        disabled = !flipped
                     }
                 };
                 actions = cardActionList1;
@@ -66,7 +63,6 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
             case Upgrade.A:
                 List<CardAction> cardActionList2 = new List<CardAction>()
                 {
-                    new ADummyAction(),
                     new AAttack()
                     {
                         damage = 3,
@@ -77,11 +73,6 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
                     {
                         count = 2,
                         disabled = !flipped
-                    },
-                    new AEnergy()
-                    {
-                        changeAmount = 1,
-                        disabled = !flipped
                     }
                 };
                 actions = cardActionList2;
@@ -89,7 +80,6 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
             case Upgrade.B:
                 List<CardAction> cardActionList3 = new List<CardAction>()
                 {
-                    new ADummyAction(),
                     new AAttack()
                     {
                         damage = 2,
@@ -101,16 +91,20 @@ internal sealed class TrentonCardDelayedPotential : Card, TrentonCard
                     {
                         count = 2,
                         disabled = !flipped
-                    },
-                    new AEnergy()
-                    {
-                        changeAmount = 1,
-                        disabled = !flipped
                     }
                 };
                 actions = cardActionList3;
                 break;
         }
         return actions;
+    }
+
+    private static void Card_GetAllTooltips_Postfix(Card __instance, State s, bool showCardTraits, ref IEnumerable<Tooltip> __result)
+    {
+        if (!showCardTraits)
+            return;
+        if (__instance is not TestingCard testingCard)
+            return;
+        //Work In Progress
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using Brandenfascher.TrentonChar.Cards;
 using Brandenfascher.TrentonChar.Artifacts;
 using Shockah.Kokoro;
+using Brandenfascher.TrentonChar.Utilities;
 
 namespace Brandenfascher.TrentonChar;
 
@@ -97,6 +98,7 @@ public sealed class ModEntry : SimpleMod
 
         Harmony = new(package.Manifest.UniqueName);
 
+        CustomTTGlossary.ApplyPatches(Harmony);
         CombatStateDataManager.ApplyPatches(Harmony);
 
         this.AnyLocalizations = new JsonLocalizationProvider(

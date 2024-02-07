@@ -1,6 +1,6 @@
 {
   "UniqueName": "Brandenfascher.TrentonChar",
-  "Version": "0.1.1",
+  "Version": "0.1.2",
   "RequiredApiVersion": "0.1.0",
   "EntryPointAssembly": "TrentonChar.dll",
   "LoadPhase": "AfterDbInit",

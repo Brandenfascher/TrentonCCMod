@@ -64,7 +64,7 @@ internal sealed class TrentonCardRaincheck : Card, TrentonCard
                     new AStatus()
                     {
                         status = Status.drawNextTurn,
-                        statusAmount = 3,
+                        statusAmount = 2,
                         targetPlayer = true
                     }
                 };

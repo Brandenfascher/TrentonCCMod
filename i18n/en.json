@@ -11,7 +11,17 @@
       "description": "Cycle between gaining 1 energy for two turns and losing 1 energy for a third turn."
     }
   },
+  "cardTrait": {
+    "flippableDiscount": {
+      "name": "Flippable Discount",
+      "description": 
+          "This card has <c=keyword>alternate costs</c> when flipped."
+    }
+  },
   "card": {
+    "Testing": {
+      "name": "Testing"
+    },
     "BorrowTime": {
       "name": "Borrow Time"
     },
@@ -24,9 +34,8 @@
     "TemporalCharge": {
       "name": "Temporal Charge",
       "description": {
-        "None": "Add <c=white>Delayed Shot</c> to the top of your <c=white>draw pile</c>.",
-        "A": "Add <c=white>Delayed Shot A</c> to the top of your <c=white>draw pile</c>.",
-        "B": "Add <c=white>Delayed Shot B</c> to the top of your <c=white>draw pile</c>."
+        "first": "Add <c=white>",
+        "last": "</c> to the top of your <c=white>draw pile</c>."
       }
     },
     "DelayedPotential": {
@@ -46,9 +55,9 @@
     "AllShesGot": {
       "name": "All She's Got",
       "description": {
-        "None": "Attack, using all energy. Dmg = x2 per <c=energy>energy</c>", // "Use all energy, attack for dmg = x2 per energy"
-        "A": "Attack, using all energy. Dmg = x2.5 per <c=energy>energy</c>",
-        "B": "Attack, using all energy. Dmg = x2 per <c=energy>energy</c>",
+        "None": "Attack using all <c=energy>energy</c> for x2 DMG each",
+        "A": "Attack using all <c=energy>energy</c> for x2.5 DMG each",
+        "B": "Attack using all <c=energy>energy</c> for x2 DMG each",
         "B-Extended": ". Gain 1 energy."
       }
     },

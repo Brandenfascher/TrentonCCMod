@@ -32,7 +32,8 @@ internal sealed class TrentonCardStasisField : Card, TrentonCard
 
         return new CardData()
         {
-            cost = cardCost
+            cost = cardCost,
+            exhaust = true
         };
     }
     public override List<CardAction> GetActions(State s, Combat c)

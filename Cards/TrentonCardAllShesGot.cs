@@ -24,8 +24,7 @@ internal sealed class TrentonCardAllShesGot : Card, TrentonCard
     }
     public override CardData GetData(State state)
     {
-        int? totalEnergyNullable = Instance.Api?.GetCurrentPlayerShipEnergy(state);
-        int totalEnergy = totalEnergyNullable == null ? 0 : totalEnergyNullable.Value;
+        int totalEnergy = Instance.Api.GetCurrentPlayerShipEnergy(state);
 
         CardData data = new CardData()
         {

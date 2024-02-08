@@ -46,6 +46,9 @@ public sealed class ModEntry : SimpleMod
     internal ISpriteEntry Trenton_Character_Squint_2 { get; }
     internal ISpriteEntry Trenton_Character_Squint_3 { get; }
     internal ISpriteEntry Trenton_Character_Squint_4 { get; }
+    internal ISpriteEntry Trenton_Character_GameOver_0 { get; }
+    internal ISpriteEntry Trenton_Character_GameOver_1 { get; }
+    internal ISpriteEntry Trenton_Character_GameOver_2 { get; }
     internal IDeckEntry Trenton_Deck { get; }
     internal static IReadOnlyList<Type> Trenton_StarterCard_Types { get; } = [
         typeof(TrentonCardWibblyWobbly),
@@ -134,6 +137,10 @@ public sealed class ModEntry : SimpleMod
         Trenton_Character_Squint_3 = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/characters/trenton/trenton_character_squint_3.png"));
         Trenton_Character_Squint_4 = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/characters/trenton/trenton_character_squint_4.png"));
 
+        Trenton_Character_GameOver_0 = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/characters/trenton/trenton_character_gameover_0.png"));
+        Trenton_Character_GameOver_1 = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/characters/trenton/trenton_character_gameover_1.png"));
+        Trenton_Character_GameOver_2 = Helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/characters/trenton/trenton_character_gameover_2.png"));
+
         Trenton_Deck = Helper.Content.Decks.RegisterDeck("TrentonDeck", new DeckConfiguration()
         {
             Definition = new DeckDef()
@@ -200,6 +207,17 @@ public sealed class ModEntry : SimpleMod
                 Trenton_Character_Squint_2.Sprite,
                 Trenton_Character_Squint_3.Sprite,
                 Trenton_Character_Squint_4.Sprite
+            }
+        });
+        Helper.Content.Characters.RegisterCharacterAnimation(new CharacterAnimationConfiguration()
+        {
+            Deck = Trenton_Deck.Deck,
+            LoopTag = "gameover",
+            Frames = new[]
+            {
+                Trenton_Character_GameOver_0.Sprite,
+                Trenton_Character_GameOver_1.Sprite,
+                Trenton_Character_GameOver_2.Sprite
             }
         });
 

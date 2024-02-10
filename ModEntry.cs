@@ -50,12 +50,15 @@ public sealed class ModEntry : SimpleMod
     internal ISpriteEntry Trenton_Character_GameOver_1 { get; }
     internal ISpriteEntry Trenton_Character_GameOver_2 { get; }
     internal IDeckEntry Trenton_Deck { get; }
-    internal static IReadOnlyList<Type> Trenton_StarterCard_Types { get; } = [
-        typeof(TrentonCardWibblyWobbly),
-        typeof(TrentonCardTemporalCharge)
+
+    internal static List<Card> Trenton_StarterCards { get; } = [
+        new TrentonCardWibblyWobbly(),
+        new TrentonCardTemporalCharge()
     ];
 
     internal static IReadOnlyList<Type> Trenton_CommonCard_Types { get; } = [
+        typeof(TrentonCardWibblyWobbly),
+        typeof(TrentonCardTemporalCharge),
         typeof(TrentonCardRaincheck),
         typeof(TrentonCardBorrowTime),
         typeof(TrentonCardAbeyance)
@@ -77,8 +80,7 @@ public sealed class ModEntry : SimpleMod
     ];
 
     internal static IEnumerable<Type> Trenton_AllCard_Types
-        => Trenton_StarterCard_Types
-        .Concat(Trenton_CommonCard_Types)
+        => Trenton_CommonCard_Types
         .Concat(Trenton_UncommonCard_Types)
         .Concat(Trenton_RareCard_Types)
         .Concat(Trenton_NoRarity_Types);
@@ -159,7 +161,10 @@ public sealed class ModEntry : SimpleMod
         {
             Deck = Trenton_Deck.Deck,
             StartLocked = false,
-            StarterCardTypes = Trenton_StarterCard_Types,
+            Starters = new StarterDeck()
+            {
+                cards = Trenton_StarterCards
+            },
             Description = this.AnyLocalizations.Bind(["character", "Trenton", "description"]).Localize,
             BorderSprite = Trenton_Character_Panel.Sprite,
             NeutralAnimation = new()
@@ -182,7 +187,7 @@ public sealed class ModEntry : SimpleMod
                     Trenton_Character_Mini_0.Sprite
                     ]
             }
-        });;
+        });
 
         Helper.Content.Characters.RegisterCharacterAnimation(new CharacterAnimationConfiguration()
         {

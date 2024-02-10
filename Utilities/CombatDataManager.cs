@@ -2,7 +2,7 @@
 
 namespace Brandenfascher.TrentonChar;
 
-internal class CombatStateDataManager
+internal sealed class CombatStateDataManager
 {
     private static ModEntry Instance => ModEntry.Instance;
 

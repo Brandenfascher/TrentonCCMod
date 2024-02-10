@@ -72,6 +72,14 @@
     },
     "ParadoxStrafe": {
       "name": "Paradox Strafe"
+    },
+    "ChronoRepair": {
+      "name": "Chrono Repair",
+      "description": {
+        "None": "Heal equal to total hull DMG taken from last turn",
+        "A": "Heal equal to total hull DMG taken from last turn",
+        "B": "Heal equal to total hull DMG taken from last turn, plus one more"
+      }
     }
   }
 }

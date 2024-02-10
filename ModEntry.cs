@@ -68,7 +68,8 @@ public sealed class ModEntry : SimpleMod
 
     internal static IReadOnlyList<Type> Trenton_RareCard_Types { get; } = [
         typeof(TrentonCardEvasiveInsight),
-        typeof(TrentonCardAllShesGot)
+        typeof(TrentonCardAllShesGot),
+        typeof(TrentonCardChronoRepair)
     ];
 
     internal static IReadOnlyList<Type> Trenton_NoRarity_Types { get; } = [
@@ -167,10 +168,10 @@ public sealed class ModEntry : SimpleMod
                 LoopTag = "neutral",
                 Frames = [
                     Trenton_Character_Neutral_0.Sprite,
-                Trenton_Character_Neutral_1.Sprite,
-                Trenton_Character_Neutral_2.Sprite,
-                Trenton_Character_Neutral_3.Sprite,
-                Trenton_Character_Neutral_4.Sprite
+                    Trenton_Character_Neutral_1.Sprite,
+                    Trenton_Character_Neutral_2.Sprite,
+                    Trenton_Character_Neutral_3.Sprite,
+                    Trenton_Character_Neutral_4.Sprite
                     ]
             },
             MiniAnimation = new()
@@ -178,7 +179,7 @@ public sealed class ModEntry : SimpleMod
                 Deck = Trenton_Deck.Deck,
                 LoopTag = "mini",
                 Frames = [
-                Trenton_Character_Mini_0.Sprite
+                    Trenton_Character_Mini_0.Sprite
                     ]
             }
         });;

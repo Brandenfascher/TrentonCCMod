@@ -21,7 +21,7 @@ internal class TrentonCardChronoRepair : Card, TrentonCard
             Meta = new()
             {
                 deck = ModEntry.Instance.Trenton_Deck.Deck,
-                rarity = Rarity.common,
+                rarity = Rarity.rare,
                 upgradesTo = [Upgrade.A, Upgrade.B]
             },
             Name = ModEntry.Instance.AnyLocalizations.Bind(["card", "ChronoRepair", "name"]).Localize

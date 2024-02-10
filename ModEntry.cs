@@ -66,7 +66,8 @@ public sealed class ModEntry : SimpleMod
 
     internal static IReadOnlyList<Type> Trenton_UncommonCard_Types { get; } = [
         typeof(TrentonCardStasisField),
-        typeof(TrentonCardParadoxStrafe)
+        typeof(TrentonCardParadoxStrafe),
+        typeof(TrentonCardAssurance)
     ];
 
     internal static IReadOnlyList<Type> Trenton_RareCard_Types { get; } = [

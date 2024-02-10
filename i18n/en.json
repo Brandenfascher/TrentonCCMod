@@ -80,6 +80,17 @@
         "A": "Heal equal to total hull DMG taken from last turn",
         "B": "Heal equal to total hull DMG taken from last turn, plus one more"
       }
-    }
+    },
+    "Assurance": {
+      "name": "Assurance",
+      "description": {
+        "None": "Search <c=white>draw pile</c>. Send one card to hand and one to the top.",
+        "A": "Search <c=white>draw pile</c>. Send one card to hand and one to the top.",
+        "B": "Search <c=white>draw pile</c>. Send two cards to hand."
+      },
+      "GetCardSelectText": {
+        "ToHand": "Pick a card in the draw pile to send to hand.",
+        "ToTopDrawPile": "Pick a card in the draw pile to send to the top of the draw pile."
+      }
   }
 }

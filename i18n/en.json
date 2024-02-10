@@ -2,7 +2,7 @@
   "character": {
     "Trenton": {
       "name": "Trenton",
-      "description": "<c=088482>Trenton</c>\nA time wizard from another dimension. His cards shift <c=boldPink>energy</c> across turns, adds cards to the top of the <c=boldPink>Draw Pile</c>, and responds to events of <c=boldPink>the previous turn</c>."
+      "description": "<c=088482>Trenton</c>\nA time wizard from another dimension. His cards shift <c=boldPink>energy</c> across turns, adds cards to the top of the <c=boldPink>deck</c>, and responds to events of <c=boldPink>the previous turn</c>."
     }
   },
   "artifact": {
@@ -35,7 +35,7 @@
       "name": "Temporal Charge",
       "description": {
         "first": "Add <c=white>",
-        "last": "</c> to the top of your <c=white>draw pile</c>."
+        "last": "</c> to the top of your <c=white>deck</c>."
       }
     },
     "DelayedPotential": {
@@ -64,11 +64,11 @@
     "Abeyance": {
       "name": "Abeyance",
       "description": {
-        "None": "Pick a <c=cardtrait>discarded</c> card. Send it to the top of your <c=white>draw pile</c>.",
-        "A": "Pick two <c=cardtrait>discarded</c> cards. Send them to the top of your <c=white>draw pile</c>.",
-        "B": "Pick an <c=cardtrait>exhausted</c> card. Send it to the top of your <c=white>draw pile</c>."
+        "None": "Pick a <c=cardtrait>discarded</c> card. Send it to the top of your <c=white>deck</c>.",
+        "A": "Pick two <c=cardtrait>discarded</c> cards. Send them to the top of your <c=white>deck</c>.",
+        "B": "Pick an <c=cardtrait>exhausted</c> card. Send it to the top of your <c=white>deck</c>."
       },
-      "GetCardSelectText": "Pick a discarded card to send to the top of your draw pile."
+      "GetCardSelectText": "Pick a discarded card to send to the top of your deck."
     },
     "ParadoxStrafe": {
       "name": "Paradox Strafe"
@@ -84,13 +84,13 @@
     "Assurance": {
       "name": "Assurance",
       "description": {
-        "None": "Search <c=white>draw pile</c>. Send one card to hand and one to the top.",
-        "A": "Search <c=white>draw pile</c>. Send one card to hand and one to the top.",
-        "B": "Search <c=white>draw pile</c>. Send two cards to hand."
+        "None": "Search <c=white>deck</c>. Send one card to hand and one to the top.",
+        "A": "Search <c=white>deck</c>. Send one card to hand and one to the top.",
+        "B": "Search <c=white>deck</c>. Send two cards to hand."
       },
       "GetCardSelectText": {
-        "ToHand": "Pick a card in the draw pile to send to hand.",
-        "ToTopDrawPile": "Pick a card in the draw pile to send to the top of the draw pile."
+        "ToHand": "Pick a card in the deck to send to hand.",
+        "ToTopDrawPile": "Pick a card in the deck to send to the top of the deck."
       }
   }
 }
